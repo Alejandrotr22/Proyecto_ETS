@@ -81,7 +81,35 @@ RolADice es un joven proyecto diseñado por y para jugadores de rol, creado para
 |Requerimientos trazados||
 |Notas|Un set de dados es un conjunto de estos necesarios para un juego de rol.|
 
-#### 3.2.5 Elegir rol
+#### 3.2.5 Crear Set de Dados
+
+| Caso de Uso Cu |        **Eliminar Set de Dados**           |
+|----------------|-------------------------------------|
+|Fuentes| |
+|Actor|Jugador|
+|Descripción|El jugador elimina un set de dados eliminando así sus dados.|
+|Flujo básico|El jugador elegido, elimina un set de dados propios para borrar los dados creados.|
+|Pre-condiciones|Elegir usuario|
+|Post-condiciones|Ninguna.|
+|Requerimientos trazados||
+|Notas|Un set de dados es un conjunto de estos necesarios para un juego de rol.|
+
+
+#### 3.2.6 Crear Set de Dados
+
+| Caso de Uso Cu |        **Elegir Set de Dados**           |
+|----------------|-------------------------------------|
+|Fuentes| |
+|Actor|Jugador|
+|Descripción|El jugador elige un set de dados|
+|Flujo básico|El jugador elegido, para poder utilizar los dados creados.|
+|Pre-condiciones|Elegir usuario|
+|Post-condiciones|Ninguna.|
+|Requerimientos trazados||
+|Notas|Un set de dados es un conjunto de estos necesarios para un juego de rol.|
+
+
+#### 3.2.7 Elegir rol
 
 | Caso de Uso Cu |        **Elegir Rol**           |
 |----------------|-------------------------------------|
@@ -94,7 +122,7 @@ RolADice es un joven proyecto diseñado por y para jugadores de rol, creado para
 |Requerimientos trazados|Roles creados previamente.|
 |Notas||
 
-#### 3.2.6 Elegir rol
+#### 3.2.8 Elegir rol
 
 | Caso de Uso Cu |        **Lanzar dado**           |
 |----------------|-------------------------------------|
@@ -107,7 +135,7 @@ RolADice es un joven proyecto diseñado por y para jugadores de rol, creado para
 |Requerimientos trazados|Haber dados que lanzar.|
 |Notas|Los dados dan valores aleatorios puestos cuando se crean y no solo pueden dar números.|
 
-#### 3.2.7 Elegir rol
+#### 3.2.9 Elegir rol
 
 | Caso de Uso Cu |        **Crear dado**           |
 |----------------|-------------------------------------|
@@ -120,7 +148,7 @@ RolADice es un joven proyecto diseñado por y para jugadores de rol, creado para
 |Requerimientos trazados||
 |Notas||
 
-#### 3.2.8 Eliminar rol
+#### 3.2.10 Eliminar rol
 
 | Caso de Uso Cu |        **Eliminar dado**           |
 |----------------|-------------------------------------|
@@ -133,7 +161,7 @@ RolADice es un joven proyecto diseñado por y para jugadores de rol, creado para
 |Requerimientos trazados|Haber roles creados previamente.|
 |Notas||
 
-#### 3.2.9 Eliminar rol
+#### 3.2.11 Eliminar rol
 
 | Caso de Uso Cu |        **Consultar manual**           |
 |----------------|-------------------------------------|
