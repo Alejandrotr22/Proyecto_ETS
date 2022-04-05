@@ -40,6 +40,6 @@ Puedes encontrar próximamente mucho más de cómo utilizar este proyecto en nue
 ---
 
 <div align="center">
-<img width="20%" src="https://github.com/Alejandrotr22/Proyecto_ETS/blob/main/Imagenes/Logos/RAD%20logo%20CB%202.png?raw=true">
+<img width="10%" src="https://github.com/Alejandrotr22/Proyecto_ETS/blob/main/Imagenes/Logos/RAD%20logo%20CB%202.png?raw=true">
 </div>
 
