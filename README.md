@@ -26,7 +26,7 @@ Alejandro Toste [Alejandrotr22](https://github.com/Alejandrotr22)
 
 ### Wiki 📖
 
-Puedes encontrar próximamente mucho más de cómo utilizar este proyecto en nuestra Wiki
+Puedes encontrar próximamente mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/Alejandrotr22/Proyecto_ETS/wiki)
 
 ---
 
