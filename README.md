@@ -2,10 +2,6 @@
 
 ## Proyecto CFGS 1º DAM (Sistemas de aplicaciones Multiplataforma)
 
-<div align="center">
-<img width="60%" src="https://github.com/Alejandrotr22/Proyecto_ETS/blob/main/Imagenes/Logos/RAD%20logo%20CB.png?raw=true">
-</div>
-
 ## Comenzando 🚀
 
 ---
