@@ -12,6 +12,26 @@ public class Usuario {
     private HashMap<String,Rol> roles;
     private HashMap<String,Set> dados;
 
+    /**
+     * Constructor con 4 parametros
+     * @param nombre nombre del usuario
+     * @param id id del usuario
+     * @param roles roles del usuarios
+     * @param dados sets de dados del usuario
+     */
+    public Usuario(String nombre, String id, HashMap<String, Rol> roles, HashMap<String, Set> dados) {
+        this.nombre = nombre;
+        this.id = id;
+        this.roles = roles;
+        this.dados = dados;
+    }
+
+    /**
+     * Constructor por defecto
+     */
+    public Usuario() {
+    }
+
     public String getNombre() {
         return nombre;
     }

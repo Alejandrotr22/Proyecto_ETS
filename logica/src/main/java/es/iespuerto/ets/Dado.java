@@ -11,6 +11,25 @@ public class Dado {
     private int nCaras;
     private String[] caras;
 
+    /**
+     * Constructor con 4 parametros
+     * @param nombre nombre del dado
+     * @param id id del dado
+     * @param nCaras numero de caras del dado
+     * @param caras Array de las caras del dado
+     */
+    public Dado(String nombre, String id, int nCaras, String[] caras) {
+        this.nombre = nombre;
+        this.id = id;
+        this.nCaras = nCaras;
+        this.caras = caras;
+    }
+    /**
+     * Constructor por defecto
+     */
+    public Dado() {
+    }
+
     public String getNombre() {
         return nombre;
     }

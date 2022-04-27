@@ -11,6 +11,24 @@ public class Rol {
     private Set dados;
     private HashMap<String,Manual> manuales;
 
+    /**
+     * Constructor con 3 paramatros
+     * @param nombre nombre del rol
+     * @param id id del rol
+     * @param dados dados del rol
+     */
+    public Rol(String nombre, String id, Set dados) {
+        this.nombre = nombre;
+        this.id = id;
+        this.dados = dados;
+    }
+    /**
+     * Constructor por defecto
+     */
+    public Rol() {
+
+    }
+
     public String getNombre() {
         return nombre;
     }

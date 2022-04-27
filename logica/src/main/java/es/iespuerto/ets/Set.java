@@ -11,6 +11,23 @@ public class Set {
     private String id;
     private HashMap<String,Dado> dados;
 
+    /**
+     * Constructor con 3 parametros
+     * @param nombre nombre del set de dados
+     * @param id id del set de dados
+     * @param dados dados asignados
+     */
+    public Set(String nombre, String id, HashMap<String, Dado> dados) {
+        this.nombre = nombre;
+        this.id = id;
+        this.dados = dados;
+    }
+    /**
+     * Constructor por defecto
+     */
+    public Set() {
+    }
+
     public String getNombre() {
         return nombre;
     }
