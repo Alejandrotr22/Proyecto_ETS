@@ -31,7 +31,7 @@ public class Usuario {
      */
     public Usuario() {
     }
-
+/*
     public String getNombre() {
         return nombre;
     }
@@ -63,7 +63,7 @@ public class Usuario {
     public void setDados(HashMap<String, Set> dados) {
         this.dados = dados;
     }
-
+*/
     /**
      * Se guarda el Rol en el usuario
      * @param rol a guardar
@@ -126,4 +126,5 @@ public class Usuario {
     public String tirarDado(Dado dado){
         return "";
     }
+
 }

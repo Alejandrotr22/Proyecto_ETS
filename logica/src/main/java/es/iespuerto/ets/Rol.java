@@ -28,7 +28,7 @@ public class Rol {
     public Rol() {
 
     }
-
+/*
     public String getNombre() {
         return nombre;
     }
@@ -60,4 +60,6 @@ public class Rol {
     public void setManuales(HashMap<String, Manual> manuales) {
         this.manuales = manuales;
     }
+
+ */
 }

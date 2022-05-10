@@ -23,7 +23,7 @@ public class Manual {
      */
     public Manual() {
     }
-
+/*
     public String getNombre() {
         return nombre;
     }
@@ -39,4 +39,6 @@ public class Manual {
     public void setId(String id) {
         this.id = id;
     }
+
+ */
 }

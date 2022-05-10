@@ -27,7 +27,7 @@ public class Set {
      */
     public Set() {
     }
-
+/*
     public String getNombre() {
         return nombre;
     }
@@ -51,4 +51,6 @@ public class Set {
     public void setDados(HashMap<String, Dado> dados) {
         this.dados = dados;
     }
+
+ */
 }
