@@ -1,7 +1,8 @@
 package es.iespuerto.ets;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 
@@ -12,10 +13,10 @@ public class SetTest {
     @Test
     public void constructoresTest(){
         set = new Set();
-        Assert.assertNotNull("No se ha generado el objeto Set",set);
+        Assertions.assertNotNull(set,"No se ha generado el objeto Set");
         HashMap<String,Dado> dados = new HashMap<>();
         set = new Set("dados D&D","S002",dados);
-        Assert.assertNotNull("No se ha generado el objeto Set con parametros",set);
+        Assertions.assertNotNull(set,"No se ha generado el objeto Set con parametros");
     }
 
 }

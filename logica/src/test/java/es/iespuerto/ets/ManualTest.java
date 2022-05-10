@@ -1,7 +1,8 @@
 package es.iespuerto.ets;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class ManualTest {
 
@@ -10,8 +11,8 @@ public class ManualTest {
     @Test
     public void constructoresTest(){
         manual = new Manual();
-        Assert.assertNotNull("No se ha generado el objeto Manual",manual);
+        Assertions.assertNotNull(manual,"No se ha generado el objeto Manual");
         manual = new Manual("Maual del jugador D&D","M002");
-        Assert.assertNotNull("No se ha generado el objeto Manual con parametros",manual);
+        Assertions.assertNotNull(manual,"No se ha generado el objeto Manual con parametros");
     }
 }
