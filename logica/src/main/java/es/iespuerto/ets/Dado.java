@@ -29,7 +29,7 @@ public class Dado {
      */
     public Dado() {
     }
- /*
+    /*
     public String getNombre() {
         return nombre;
     }
