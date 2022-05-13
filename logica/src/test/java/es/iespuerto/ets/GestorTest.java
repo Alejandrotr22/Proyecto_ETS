@@ -22,16 +22,35 @@ public class GestorTest {
 
     @Test
     public void crearUsuario(){
-        gestor.crearUsuario(nombre);
+        Usuario u = new Usuario();
+        gestor.crearUsuario(u);
         Assertions.assertEquals(gestor.getUsuarios().size(), 1,"No se ha añadido el usuario al mapa");
+        for (int i = 0; i < 9; i++) {
+            gestor.crearUsuario(nombre);
+        }
+        boolean b = gestor.crearUsuario(nombre);
+        Assertions.assertTrue(!(b),"Se añade mas de 100 usuarios");
+        boolean res = gestor.crearUsuario(u);
+        Assertions.assertTrue(!res,"Se ha añadido el usuario 2 veces");
     }
     @Test
     public void eliminarUsuario(){
         Usuario u = new Usuario();
         String resultado = gestor.eliminarUsuario(u);
         Assertions.assertTrue(resultado.contains("creados"));
-        //gestor.crearUsuario(nombre);
-        //Assertions.assertEquals(gestor.getUsuarios().size(), 1,"No se ha añadido el usuario al mapa");
+        Usuario usuario = new Usuario();
+        gestor.crearUsuario(usuario);
+        resultado = gestor.eliminarUsuario(gestor.getUsuarios().get(u.getId()));
+        Assertions.assertTrue(resultado.contains("eliminado"),"No se ha eliminado el usuario");
+        Usuario usuario2 = new Usuario();
+        gestor.crearUsuario("hola");
+        resultado = gestor.eliminarUsuario(usuario2);
+        Assertions.assertTrue(resultado.contains("existe"),"Se ha eliminado el usuario indebido");
+    }
+
+    public void elegirUsuario(){
+        Usuario u = new Usuario();
+        
     }
 
 }
