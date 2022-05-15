@@ -28,7 +28,7 @@ public class Rol {
     public Rol() {
 
     }
-
+/*
     public String getNombre() {
         return nombre;
     }
@@ -37,10 +37,12 @@ public class Rol {
         this.nombre = nombre;
     }
 
+ */
+
     public String getId() {
         return id;
     }
-
+/*
     public void setId(String id) {
         this.id = id;
     }
@@ -60,5 +62,5 @@ public class Rol {
     public void setManuales(HashMap<String, Manual> manuales) {
         this.manuales = manuales;
     }
-
+*/
 }

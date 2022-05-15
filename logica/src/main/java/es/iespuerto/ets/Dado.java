@@ -1,6 +1,7 @@
 package es.iespuerto.ets;
 
 import java.util.HashMap;
+import java.util.Random;
 
 /**
  * Un dado contiene un numero de caras y en ellas unos valores deterninados por el usuario
@@ -28,6 +29,9 @@ public class Dado {
      * Constructor por defecto
      */
     public Dado() {
+        Random rnd = new Random();
+        id = rnd.nextInt(100) + "";
+
     }
     public String getNombre() {
         return nombre;
@@ -40,7 +44,7 @@ public class Dado {
     public String getId() {
         return id;
     }
-
+/*
     public void setId(String id) {
         this.id = id;
     }
@@ -48,6 +52,8 @@ public class Dado {
     public int getnCaras() {
         return nCaras;
     }
+
+ */
 
     public void setnCaras(int nCaras) {
         this.nCaras = nCaras;

@@ -1,6 +1,7 @@
 package es.iespuerto.ets;
 
 import java.util.HashMap;
+import java.util.Random;
 
 /**
  * Un objeto que almacena la informacion de una persona, como los roles que tiene y sus sets de dados personalizados
@@ -33,22 +34,27 @@ public class Usuario {
         roles = new HashMap<>();
         dados = new HashMap<>();
     }
-
+/*
     public String getNombre() {
         return nombre;
     }
-
+ */
+    /*
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+     */
+
     public String getId() {
         return id;
     }
-
+/*
     public void setId(String id) {
         this.id = id;
     }
+
+
 
     public HashMap<String, Rol> getRoles() {
         return roles;
@@ -57,15 +63,15 @@ public class Usuario {
     public void setRoles(HashMap<String, Rol> roles) {
         this.roles = roles;
     }
-
+*/
     public HashMap<String, Set> getDados() {
         return dados;
     }
-
+/*
     public void setDados(HashMap<String, Set> dados) {
         this.dados = dados;
     }
-
+*/
     /**
      * Se guarda el Rol en el usuario
      * @param rol a guardar
@@ -99,10 +105,22 @@ public class Usuario {
     /**
      * Se crea un set de dados que tambien se guarda
      */
-    public boolean crearSet(){
+    public boolean crearSet(String nombre){
         boolean res = false;
-
-
+        boolean existe = false;
+        for (String id: dados.keySet()) {
+            if (dados.get(id).getNombre() == nombre){
+            existe = true;
+            }
+        }
+        if (dados.size() == 0){
+            existe = false;
+        }
+        if (!existe){
+            Set set = new Set();
+            set.setNombre(nombre);
+            dados.put(set.getId(),set);
+            }
         return res;
     }
 
@@ -113,7 +131,7 @@ public class Usuario {
     public boolean eliminarSet(Set set) throws Exception {
         boolean res = false;
         if (!dados.isEmpty()){
-            if (!dados.containsValue(set)){
+            if (dados.containsValue(set)){
                 dados.remove(set.getId());
                 res = true;
             }else{
@@ -129,8 +147,27 @@ public class Usuario {
      * Se crea un dado personalizado para guardarlo en el set
      * @param set donde se guarda el dado
      */
-    public void crearDado(Set set){
+    public boolean crearDado(Set set, String nombre,String[] caras){
+        boolean res = false;
+        boolean existe = false;
+        for (String id: set.getDados().keySet()) {
+            if (set.getDados().get(id).getNombre() == nombre){
+                existe = true;
+            }
 
+        }
+        if (set.getDados().size() == 0){
+            existe = false;
+        }
+        if (!existe){
+            Dado dado = new Dado();
+            dado.setCaras(caras);
+            dado.setNombre(nombre);
+            dado.setnCaras(caras.length);
+            set.setNombre(nombre);
+            set.getDados().put(dado.getId(),dado);
+        }
+        return res;
     }
 
     /**
@@ -140,7 +177,7 @@ public class Usuario {
     public boolean eliminarDado(Set set,Dado dado) throws Exception {
         boolean res = false;
         if (!set.getDados().isEmpty()){
-            if (!set.getDados().containsValue(dado)){
+            if (set.getDados().containsValue(dado)){
                 set.getDados().remove(dado.getId());
                 res = true;
             }else{
@@ -159,7 +196,7 @@ public class Usuario {
     public boolean guardarDado(Set set,Dado dado) throws Exception {
         boolean res = false;
         if(!set.getDados().containsValue(dado)){
-            set.getDados().put(set.getId(),dado);
+            set.getDados().put(dado.getId(),dado);
             res = true;
         }else{
             throw new Exception("El dado ya está guardado en el Set");
@@ -171,8 +208,12 @@ public class Usuario {
      * Se lanza un dado para obtener un resultado aleatorio
      * @param dado a lanzar
      */
-    public String tirarDado(Dado dado){
-        return "";
+    public String tirarDado(Set set,Dado dado){
+        String res = "";
+        Random rnd = new Random();
+        String[] caras = set.getDados().get(dado.getId()).getCaras();
+        res = caras[rnd.nextInt(caras.length)];
+        return res;
     }
 
 }

@@ -27,13 +27,17 @@ public class Set {
      * Constructor por defecto
      */
     public Set() {
+        Random rnd = new Random();
+        dados = new HashMap<>();
+        this.id = rnd.nextInt(100) + "";
     }
+    /*
     public Set(String nombre) {
         Random rnd = new Random();
         this.nombre = nombre;
         this.id = rnd.nextInt(100) + "";
     }
-
+*/
     public String getNombre() {
         return nombre;
     }
@@ -45,18 +49,18 @@ public class Set {
     public String getId() {
         return id;
     }
-
+/*
     public void setId(String id) {
         this.id = id;
     }
-
+*/
     public HashMap<String, Dado> getDados() {
         return dados;
     }
-
+/*
     public void setDados(HashMap<String, Dado> dados) {
         this.dados = dados;
     }
-
+*/
 
 }
