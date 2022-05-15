@@ -17,6 +17,10 @@ public class Gestor {
         usuarios = new HashMap<>();
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
     /**
      * Metodo para crear un Usuario vacio asignandole un id aleatorio y comprobando que no hayan mas de 1000 usuarios
      * @param nombre nombre del nuevo usuario
@@ -68,8 +72,15 @@ public class Gestor {
         return res;
     }
 
-    public void elegirUsuario(Usuario u){
-        usuario = u;
+    public boolean elegirUsuario(Usuario u) throws Exception {
+        boolean res = true;
+        if (usuarios.containsValue(u)){
+            usuario = u;
+        }else{
+            throw new Exception("No existe el usuario seleccionado");
+        }
+
+        return res;
     }
 
     public HashMap<String, Usuario> getUsuarios() {

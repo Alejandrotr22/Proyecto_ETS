@@ -28,7 +28,7 @@ public class Rol {
     public Rol() {
 
     }
-/*
+
     public String getNombre() {
         return nombre;
     }
@@ -61,5 +61,4 @@ public class Rol {
         this.manuales = manuales;
     }
 
- */
 }

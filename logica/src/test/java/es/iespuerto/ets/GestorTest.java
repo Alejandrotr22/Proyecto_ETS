@@ -47,9 +47,24 @@ public class GestorTest {
         resultado = gestor.eliminarUsuario(usuario2);
         Assertions.assertTrue(resultado.contains("existe"),"Se ha eliminado el usuario indebido");
     }
-
+    @Test
     public void elegirUsuario(){
         Usuario u = new Usuario();
+        try {
+            gestor.elegirUsuario(u);
+            System.out.println(gestor.getUsuario());
+        }catch (Exception ex){
+            System.out.println(ex);
+        }
+        Assertions.assertEquals(gestor.getUsuario(),null,"no existe el usuario seleccionado");
+
+        gestor.crearUsuario(u);
+        try{
+            gestor.elegirUsuario(u);
+        }catch (Exception ex){
+            System.out.println(ex);
+        }
+        Assertions.assertNotNull(gestor.getUsuario(),"no se ha seleccionado el usuario");
         
     }
 

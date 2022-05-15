@@ -29,7 +29,6 @@ public class Dado {
      */
     public Dado() {
     }
-    /*
     public String getNombre() {
         return nombre;
     }
@@ -62,5 +61,5 @@ public class Dado {
         this.caras = caras;
     }
 
- */
+
 }

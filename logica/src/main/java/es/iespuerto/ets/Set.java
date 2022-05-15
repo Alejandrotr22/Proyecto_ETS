@@ -1,6 +1,7 @@
 package es.iespuerto.ets;
 
 import java.util.HashMap;
+import java.util.Random;
 
 /**
  * Una compilacion de dados
@@ -27,7 +28,12 @@ public class Set {
      */
     public Set() {
     }
-/*
+    public Set(String nombre) {
+        Random rnd = new Random();
+        this.nombre = nombre;
+        this.id = rnd.nextInt(100) + "";
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -52,5 +58,5 @@ public class Set {
         this.dados = dados;
     }
 
- */
+
 }
